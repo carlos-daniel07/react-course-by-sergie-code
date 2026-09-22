@@ -15,26 +15,37 @@ const ListadoApp = () => {
   };
 
   let listadoSecciones = [
-    { nombre: "Instalaciones necesarias", visto: true },
-    { nombre: "Curso de Vite", visto: true },
-    { nombre: "Componentes", visto: true },
-    { nombre: "Variables en JSX", visto: true },
-    { nombre: "Props", visto: true },
-    { nombre: "Eventos", visto: true },
-    { nombre: "UseState", visto: true },
-    { nombre: "Redux", visto: false },
-    { nombre: "customHooks", visto: false },
+    { id: 1, nombre: "Instalaciones necesarias", visto: true },
+    { id: 2, nombre: "Curso de Vite", visto: true },
+    { id: 3, nombre: "Componentes", visto: true },
+    { id: 4, nombre: "Variables en JSX", visto: true },
+    { id: 5, nombre: "Props", visto: true },
+    { id: 6, nombre: "Eventos", visto: true },
+    { id: 7, nombre: "UseState", visto: true },
+    { id: 8, nombre: "Redux", visto: false },
+    { id: 9, nombre: "customHooks", visto: false },
   ];
   const [arreglo, setArreglo] = useState(listadoSecciones);
+
+  const onAddTask = (val) => {
+    let value = val.trim();
+    if (value.length < 1) return;
+    const envio = {
+      id: arreglo.length + 1,
+      nombre: value,
+      visto: false,
+    };
+    setArreglo([...arreglo, envio]);
+  };
 
   return (
     <>
       <h2>Listado de temas del curso</h2>
-      <AgrgarTarea agregarTarea={setArreglo} />
+      <AgrgarTarea agregarTarea={onAddTask} />
       <ol>
         {arreglo.map((item) => {
           return (
-            <Items key={item.nombre} nombre={item.nombre} visto={item.visto} />
+            <Items key={item.id} nombre={item.nombre} visto={item.visto} />
           );
         })}
       </ol>

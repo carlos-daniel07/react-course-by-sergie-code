@@ -8,12 +8,8 @@ const AgrgarTarea = ({ agregarTarea }) => {
   };
 
   const onSubmit = (event) => {
-    const envio = {
-      nombre: inputValue,
-      visto: false,
-    };
     event.preventDefault();
-    agregarTarea((arreglo) => [...arreglo, envio]);
+    agregarTarea(inputValue);
   };
 
   return (
