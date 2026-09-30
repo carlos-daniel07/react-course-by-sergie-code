@@ -1,7 +1,11 @@
 import { useState } from "react";
-import { useForm } from "./hooks/useForm";
+import { useForm } from "../hooks/useForm";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const FormComponent = () => {
+  const focusRef = useRef();
+
   const initialForm = {
     userName: "",
     email: "",
@@ -15,6 +19,10 @@ const FormComponent = () => {
     e.preventDefault();
     console.log(formState);
   };
+
+  useEffect(() => {
+    focusRef.current.focus();
+  }, []);
 
   return (
     <>
@@ -51,6 +59,7 @@ const FormComponent = () => {
             Password
           </label>
           <input
+            ref={focusRef}
             type="password"
             className="form-control"
             name="password"

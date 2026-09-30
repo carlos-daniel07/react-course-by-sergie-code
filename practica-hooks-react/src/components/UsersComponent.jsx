@@ -1,4 +1,4 @@
-import { useFetch } from "./hooks/useFetch";
+import { useFetch } from "../hooks/useFetch";
 
 const UsersComponent = () => {
   const { data, isLoading, errors } = useFetch(

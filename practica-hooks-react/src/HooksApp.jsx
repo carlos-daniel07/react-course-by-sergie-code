@@ -1,7 +1,8 @@
 import React from "react";
-import CounterCmponent from "./CounterCmponent";
-import FormComponent from "./FormComponent";
-import UsersComponent from "./UsersComponent";
+import CounterCmponent from "./components/CounterCmponent";
+import FormComponent from "./components/FormComponent";
+import UsersComponent from "./components/UsersComponent";
+import HeavyCalculations from "./components/HeavyCalculations";
 
 const HooksApp = () => {
   return (
@@ -13,6 +14,8 @@ const HooksApp = () => {
       <FormComponent />
       <hr />
       <UsersComponent />
+      <hr />
+      <HeavyCalculations />
     </>
   );
 };
