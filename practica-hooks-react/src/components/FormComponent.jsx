@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useForm } from "../hooks/useForm";
 import { useRef } from "react";
 import { useEffect } from "react";
@@ -26,7 +25,7 @@ const FormComponent = () => {
 
   return (
     <>
-      <h1>Formulario</h1>
+      <h2>Formulario</h2>
       <form onSubmit={onSubmit}>
         <div className="mb-3">
           <label htmlFor="userName" className="form-label">

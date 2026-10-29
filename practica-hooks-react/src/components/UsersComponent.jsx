@@ -7,7 +7,7 @@ const UsersComponent = () => {
 
   return (
     <>
-      <h1>Lista de Usuarios</h1>
+      <h2>Lista de Usuarios</h2>
       {isLoading ? (
         <h1>Cargando</h1>
       ) : errors ? (

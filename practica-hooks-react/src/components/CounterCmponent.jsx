@@ -5,7 +5,7 @@ const CounterCmponent = () => {
 
   return (
     <>
-      <h1>Contador: {counter}</h1>
+      <h2>Contador: {counter}</h2>
       <button className="btn btn-primary" onClick={() => increment(5)}>
         +1
       </button>

@@ -22,7 +22,7 @@ const HeavyCalculations = () => {
 
   return (
     <>
-      <h1>Calculos pesados</h1>
+      <h2>Calculos pesados</h2>
       <h2>Calculos: </h2>
       <p>{getCalculo(listaNumeros)}</p>
       <button className="btn btn-primary" onClick={() => setShow(!show)}>
